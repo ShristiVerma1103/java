@@ -313,6 +313,7 @@ void dll_insert_at_pos()
     new->next= q->next;
     new->prev= q;
     q->next= new;
+    q->next->prev= new;
     printf("new node inserted at position %d", pos);
 }
 void dll_insert_at_end()
